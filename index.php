@@ -1,9 +1,6 @@
 <?php
 
-use namePlayer\TextyShare\GenerateText;
+use namePlayer\TextyShare\Router;
 
 require_once __DIR__.'/vendor/autoload.php';
-
-$gentext = new GenerateText();
-
-var_dump($gentext->helloWorld());
+require_once __DIR__.'/routes.php';
