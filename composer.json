@@ -1,0 +1,17 @@
+{
+    "name": "nameplayer/textyshare",
+    "description": "Share your Text",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "namePlayer\\TextyShare\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "namePlayer",
+            "email": "robin@npcore.net"
+        }
+    ],
+    "require": {}
+}
