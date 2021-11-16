@@ -13,5 +13,9 @@
             "email": "robin@npcore.net"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-json": "*",
+        "michelf/php-markdown": "^1.9",
+        "ezyang/htmlpurifier": "^4.13"
+    }
 }

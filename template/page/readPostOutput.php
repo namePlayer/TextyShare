@@ -15,18 +15,16 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <div class="card">
-                    <div class="card-header">
-                        Content of <b><?= $reader->getDocumentJsonAsObject()->title ?></b>
-                    </div>
-                    <div class="card-body">
-
-                    </div>
-                </div>
+                <b><?= $reader->getDocumentJsonAsObject()->title ?></b>
+                <small><?= $markdownFromJsonAsHtml ?></small>
             </div>
             <div class="col-4">
-                <h4>What is this?</h4>
-                <p>With this service you can share Text </p>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4>What is this?</h4>
+                        <p>With this service you can share Text </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
