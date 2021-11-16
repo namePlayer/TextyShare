@@ -2,7 +2,7 @@
 
 namespace namePlayer\TextyShare;
 
-class OutputContent
+class TemplateEngine
 {
 
 }
