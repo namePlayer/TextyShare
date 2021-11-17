@@ -33,8 +33,8 @@ class GenerateContent
 
         $json = "{\n";
 
-        $json .= "\t\"title\": \"".$this->title."\"\n";
-        $json .= "\t\"author\": \"".$this->author."\"\n";
+        $json .= "\t\"title\": \"".$this->title."\"\n,";
+        $json .= "\t\"author\": \"".$this->author."\"\n,";
         $json .= "\t\"posted\": ".time().",\n";
         $json .= "\t\"expiry\": 0,\n";
         $json .= "\t\"passwordHash\": null\n";
