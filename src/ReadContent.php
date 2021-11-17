@@ -8,6 +8,7 @@ class ReadContent
 {
 
     private string $jsonData;
+    private string $postLocation;
 
     /**
      *
@@ -16,11 +17,12 @@ class ReadContent
     public function __construct(string $postLocation)
     {
 
-        if(!file_exists($postLocation)) {
-            throw new Exception('File cannot be located: ' . $postLocation);
+        if(!file_exists($postLocation . 'json')) {
+            throw new Exception('File cannot be located: ' . $postLocation . 'json');
         }
 
-        $this->jsonData = file_get_contents($postLocation);
+        $this->postLocation = $postLocation;
+        $this->jsonData = file_get_contents($postLocation . 'json');
 
     }
 
@@ -34,6 +36,12 @@ class ReadContent
     public function getDocumentJsonAsObject(): object {
 
         return json_decode($this->jsonData);
+
+    }
+
+    public function getDocumentText(): string {
+
+        return file_get_contents($this->postLocation . 'md');
 
     }
 

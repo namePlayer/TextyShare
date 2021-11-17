@@ -24,17 +24,24 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Author</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1">
+                                        <label for="contentTitleInput" class="form-label">Title</label>
+                                        <input type="text" class="form-control" id="contentTitleInput" name="contentTitleInput">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="contentAuthorInput" class="form-label">Author</label>
+                                        <input type="text" class="form-control" id="contentAuthorInput" name="contentAuthorInput">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Text</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <label for="contentTextInput" class="form-label">Text</label>
+                                        <textarea class="form-control" id="contentTextInput" name="contentTextInput" rows="5"></textarea>
                                         <small class="text-small text-muted">Text formatting can be done with Markdown</small>
                                     </div>
                                 </div>
+                                <div class="col-12"><button type="submit" class="btn btn-dark w-100">Save</button></div>
                             </div>
                         </form>
                     </div>

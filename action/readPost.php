@@ -3,7 +3,7 @@
 use namePlayer\TextyShare\ReadContent;
 use Michelf\Markdown;
 
-$request = CONTENT_DIR.'/'.$requestedContent.'.json';
+$request = CONTENT_DIR.'/'.$requestedContent.'.';
 
 try {
     $reader = new ReadContent($request);
@@ -12,6 +12,6 @@ try {
     return;
 }
 
-$markdownFromJsonAsHtml = Markdown::defaultTransform($htmlPurifier->purify($reader->getDocumentJsonAsObject()->siteContent));
+$markdownFromDocumentAsHtml = Markdown::defaultTransform($htmlPurifier->purify($reader->getDocumentText()));
 
 require_once TEMPLATE_DIR . '/page/readPostOutput.php';

@@ -5,6 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
     <title><?= PAGE_TITLE ?> | Home</title>
     <link rel="stylesheet" href="<?= $router->readAndOutputRequestedPath() ?>/asset/css/bootstrap.min.css">
 </head>
@@ -14,11 +19,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-md-8">
                 <b><?= $reader->getDocumentJsonAsObject()->title ?></b>
-                <small><?= $markdownFromJsonAsHtml ?></small>
+                <small><?= $markdownFromDocumentAsHtml ?></small>
             </div>
-            <div class="col-4">
+            <div class="col-md-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h4>What is this?</h4>
