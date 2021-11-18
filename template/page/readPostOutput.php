@@ -15,7 +15,7 @@
             max-width: 100%;
         }
     </style>
-    <title><?= PAGE_TITLE ?> | Home</title>
+    <title><?= PAGE_TITLE ?> | <?= $reader->getDocumentJsonAsObject()->title ?></title>
     <link rel="stylesheet" href="<?= $router->readAndOutputRequestedPath() ?>/asset/css/bootstrap.min.css">
 </head>
 <body>
