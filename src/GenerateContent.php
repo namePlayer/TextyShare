@@ -2,20 +2,12 @@
 
 namespace namePlayer\TextyShare;
 
-use namePlayer\TextyShare\TextyshareUtils;
-
 class GenerateContent
 {
 
     private string $title;
     private string $author;
     private string $text;
-    private TextyshareUtils $utils;
-
-    public function __construct()
-    {
-        $this->utils = new TextyshareUtils();
-    }
 
     public function setTitle(string $title): void {
         $this->title = $title;
@@ -35,9 +27,7 @@ class GenerateContent
 
         $json .= "\t\"title\": \"".$this->title."\",\n";
         $json .= "\t\"author\": \"".$this->author."\",\n";
-        $json .= "\t\"posted\": ".time().",\n";
-        $json .= "\t\"expiry\": 0,\n";
-        $json .= "\t\"passwordHash\": null\n";
+        $json .= "\t\"posted\": ".time()."\n";
 
         $json .= "}";
 
