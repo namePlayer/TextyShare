@@ -5,6 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="<?= $reader->getDocumentJsonAsObject()->author ?>">
+    <meta name="description" content="View the Post by <?= $reader->getDocumentJsonAsObject()->author ?> » With <?= PAGE_TITLE ?> you can share your texts and style them with markdown. ">
+    <meta name="generator" content="<?= PAGE_TITLE ?>">
+
     <style>
         img {
             max-width: 100%;
