@@ -13,6 +13,9 @@
     <?= $templateEngine ->render('navigation', ['router' => $router]) ?>
 
     <div class="container">
+
+        <?= $templateEngine->outputAlerts($alerts) ?>
+
         <div class="row">
             <div class="col-8">
                 <div class="card">

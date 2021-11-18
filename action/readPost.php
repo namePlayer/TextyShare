@@ -8,7 +8,15 @@ $request = CONTENT_DIR.'/'.$requestedContent.'.';
 try {
     $reader = new ReadContent($request);
 } catch (Exception $e) {
-    header("Location: ".$router->readAndOutputRequestedPath().'/');
+
+    require_once TEMPLATE_DIR.'/page/postNotFound.php';
+
+    return;
+}
+
+if(!$reader->verifyDocumentJson()) {
+    require_once TEMPLATE_DIR.'/page/postJsonNotVerified.php';
+
     return;
 }
 

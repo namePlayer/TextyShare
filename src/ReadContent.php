@@ -26,7 +26,7 @@ class ReadContent
 
     }
 
-    public function verifyDocumentJson(?string $json): bool {
+    public function verifyDocumentJson(string $json = ''): bool {
 
         json_decode(empty($json) ? $this->jsonData : $json);
         return json_last_error() === JSON_ERROR_NONE;

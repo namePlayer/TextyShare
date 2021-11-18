@@ -20,8 +20,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <b><?= $reader->getDocumentJsonAsObject()->title ?></b>
-                <small><?= $markdownFromDocumentAsHtml ?></small>
+                <b><?= $reader->getDocumentJsonAsObject()->title ?></b> <br>
+                <small class="text-muted">By <b><?= $reader->getDocumentJsonAsObject()->author ?></b>. Posted at <?= date('d.m.Y H:i', $reader->getDocumentJsonAsObject()->posted) ?> </small>
+                <hr>
+                <?= $markdownFromDocumentAsHtml ?>
             </div>
             <div class="col-md-4">
                 <div class="card shadow-sm">

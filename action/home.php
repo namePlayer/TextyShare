@@ -3,6 +3,8 @@
 use namePlayer\TextyShare\GenerateContent;
 use namePlayer\TextyShare\TextyshareUtils;
 
+$alerts = [];
+
 if(isset($_POST['contentTextInput'], $_POST['contentAuthorInput'], $_POST['contentTitleInput'])) {
 
     $generator = new GenerateContent();
@@ -16,9 +18,9 @@ if(isset($_POST['contentTextInput'], $_POST['contentAuthorInput'], $_POST['conte
     $data = $generator->generateJsonFromData();
 
     if(($generator->saveDataToJson($data, $saveName)) && ($generator->saveText($saveName))) {
-        echo 'Success. File: <a href="'.$router->readAndOutputRequestedPath() . '/read/' . $saveName . '">' . $router->readAndOutputRequestedPath() . '/read/' . $saveName . '</a>';
+        $alerts[] = ['type' => 'success', 'message' => 'Successfully created Post. Go to your Post: <a href="'.$router->readAndOutputRequestedPath() . '/read/' . $saveName . '">' . $router->readAndOutputRequestedPath() . '/read/' . $saveName . '</a>'];
     } else {
-        echo 'Error';
+        $alerts[] = ['type' => 'danger', 'message' => 'An error occurred while creating the Post.'];
     }
 
 }
